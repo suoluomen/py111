@@ -31,6 +31,6 @@ URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.f
 
 with request.urlopen(URL, timeout=4) as f:
     data = f.read()
-# print(f.url)
+print(f.url)
 result = parseXml(data.decode('utf-8'))
 print(result)
